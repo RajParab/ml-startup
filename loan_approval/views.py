@@ -65,14 +65,14 @@ def loanform(request):
 
 
 def get_answer(data):
-	sc=Normalizer(norm='l2')
-	#data=np.array(data)
-	data_scaled=sc.fit_transform(data)
+	scaler = joblib.load('D:/Raj/make money with ml/5th week/env/src/scaler.save')
+	data_scaled=scaler.transform(data)
 	#data_scaled = sc.fit_transform(data.reshape(20,-1))
 	#data_test = data_scaled.reshape( -1, 20)
 	mdl=joblib.load('D:/Raj/make money with ml/5th week/env/src/loan_model.pkl')
 	y_pred=mdl.predict(data_scaled)
 	print(data_scaled)
+	print(y_pred)
 	return y_pred[0]
 
 
