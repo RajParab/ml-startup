@@ -4,7 +4,7 @@ chardet==3.0.4
 Django==2.2.6
 django-bootstrap4==1.0.1
 idna==2.8
-joblib==0.14.0
+joblib==1.2.0
 numpy==1.17.2
 pandas==0.25.1
 Pillow==6.2.0
